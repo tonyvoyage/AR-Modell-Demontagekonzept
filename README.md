@@ -1,8 +1,8 @@
-# AR-model-viewer
-AR Viewer Demontagekonzept cunova
+# AR-Modell Demontagekonzept
 
 Dieses Projekt enthält einen webbasierten AR-Viewer
-für das im Rahmen eines Technikerprojektes erstelltem Demontagekonzept.
+für das im Rahmen eines Technikerprojektes erstellte Demontagekonzept.
+Der Auftraggeber ist cunova.
 
 ## Funktionen
 
