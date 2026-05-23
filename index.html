@@ -68,12 +68,14 @@
   </model-viewer>
 
   <script>
-    const viewer = document.getElementById("viewer");
-    const loader = document.getElementById("loader-wrapper");
+     const viewer = document.getElementById("viewer");
+  const loader = document.getElementById("loader-wrapper");
 
-    viewer.addEventListener("load", () => {
+  viewer.addEventListener("load", () => {
+    setTimeout(() => {
       loader.style.display = "none";
-    });
+    }, 3000);
+  });
   </script>
 
 </body>
