@@ -56,8 +56,8 @@
 
   <model-viewer
       id="viewer"
-      src="Demontagekonzept_Anfangszustand.glb"
-      ios-src="Demontagekonzept_Anfangszustand.glb"
+      src="Demontagekonzept_Anfangszustand2.glb"
+      ios-src="Demontagekonzept_Anfangszustand2.glb"
       ar
       ar-modes="scene-viewer quick-look webxr"
       camera-controls
@@ -65,10 +65,6 @@
       shadow-intensity="1"
       alt="3D Modell"
       poster="preview-demontagekonzept.jpeg">
-
-      <button slot="ar-button" id="ar-button">
-        In AR öffnen
-      </button>
 
   </model-viewer>
 
@@ -79,7 +75,7 @@
   viewer.addEventListener("load", () => {
     setTimeout(() => {
       loader.style.display = "none";
-    }, 2000);
+    }, 1000);
   });
   </script>
 
