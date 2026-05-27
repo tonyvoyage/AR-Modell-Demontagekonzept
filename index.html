@@ -59,12 +59,38 @@
       src="Demontagekonzept_Anfangszustand.glb"
       ios-src="Demontagekonzept_Anfangszustand.glb"
       ar
-      ar-modes="webxr scene-viewer quick-look"
+      ar-modes="scene-viewer webxr quick-look"
       camera-controls
       auto-rotate
       shadow-intensity="1"
       alt="3D Modell"
       poster="preview-demontagekonzept.jpeg">
+
+   <button slot="ar-button" style="
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 320px;
+  height: 90px;
+
+  border-radius: 999px;
+  border: none;
+
+  background: #004752;
+  color: white;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+
+  z-index: 1000;
+">
+  Bei mir ansehen
+  </button>
+  
   </model-viewer>
 
   <script>
