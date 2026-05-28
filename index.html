@@ -66,8 +66,8 @@
     interaction-prompt="none"
     touch-action="pan-y"
     camera-orbit="0deg 75deg 150%"
-min-camera-orbit="auto auto 50%"
-max-camera-orbit="auto auto 800%"
+min-camera-orbit="auto auto 20%"
+max-camera-orbit="auto auto 200%"
 field-of-view="45deg"
 min-field-of-view="25deg"
 max-field-of-view="60deg"
@@ -96,7 +96,7 @@ function stopAutoRotate() {
 
   clearTimeout(rotateTimeout);
 
-  rotateTimeout = setTimeout(startAutoRotate, 15000);
+  rotateTimeout = setTimeout(startAutoRotate, 10000);
 }
 
 viewer.addEventListener("camera-change", stopAutoRotate);
