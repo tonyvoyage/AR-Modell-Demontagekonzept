@@ -56,24 +56,21 @@
   </div>
 
   <model-viewer
-      id="viewer"
-      src="Demontagekonzept_Anfangszustand.glb"
-      ios-src="Demontagekonzept_Anfangszustand.glb"
-      ar
-      ar-modes="scene-viewer webxr quick-look"
-      camera-controls
-
-      min-camera-orbit="auto auto 0.5m"
-      max-camera-orbit="auto auto 500m"
-      field-of-view="20deg">
-
-      interaction-prompt="none"
-      touch-action="pan-y"
-
-      auto-rotate
-      shadow-intensity="1"
-      alt="3D Modell"
-      poster="preview-demontagekonzept.jpeg">
+       id="viewer"
+    src="Demontagekonzept_Anfangszustand.glb"
+    ios-src="Demontagekonzept_Anfangszustand.glb"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    alt="3D Modell"
+    poster="preview-demontagekonzept.jpeg"
+    interaction-prompt="none"
+    touch-action="pan-y"
+    min-camera-orbit="auto auto 0.05m"
+    max-camera-orbit="auto auto 500m"
+    field-of-view="15deg"
+    min-field-of-view="5deg"
+    max-field-of-view="45deg">
 
   </model-viewer>
 
