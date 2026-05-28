@@ -56,18 +56,18 @@
   </div>
 
   <model-viewer
-       id="viewer"
+    id="viewer"
     src="Demontagekonzept_Anfangszustand.glb"
     ios-src="Demontagekonzept_Anfangszustand.glb"
     camera-controls
-    auto-rotate
     shadow-intensity="1"
     alt="3D Modell"
     poster="preview-demontagekonzept.jpeg"
     interaction-prompt="none"
     touch-action="pan-y"
-    min-camera-orbit="auto auto 0.05m"
-    max-camera-orbit="auto auto 500m"
+    camera-orbit="0deg 75deg 50m"
+    min-camera-orbit="auto auto 1m"
+    max-camera-orbit="auto auto 1000m"
     field-of-view="15deg"
     min-field-of-view="5deg"
     max-field-of-view="45deg">
@@ -83,7 +83,27 @@
       loader.style.display = "none";
     }, 1000);
   });
-  </script>
+
+let rotateTimeout;
+
+function startAutoRotate() {
+  viewer.autoRotate = true;
+}
+
+function stopAutoRotate() {
+
+  viewer.autoRotate = false;
+
+  clearTimeout(rotateTimeout);
+
+  rotateTimeout = setTimeout(startAutoRotate, 15000);
+}
+
+viewer.addEventListener("camera-change", stopAutoRotate);
+
+startAutoRotate();
+ 
+</script>
 
 </body>
 </html>
