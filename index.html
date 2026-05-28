@@ -46,21 +46,6 @@
       }
     }
 
-#custom-ar-button {
-  position: fixed;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 320px;
-  height: 90px;
-  border-radius: 999px;
-  border: none;
-  background: #004752;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  z-index: 99999;
-}
   </style>
 </head>
 
@@ -77,16 +62,20 @@
       ar
       ar-modes="scene-viewer webxr quick-look"
       camera-controls
+
+      min-camera-orbit="auto auto 0.5m"
+      max-camera-orbit="auto auto 500m"
+      field-of-view="20deg">
+
+      interaction-prompt="none"
+      touch-action="pan-y"
+
       auto-rotate
       shadow-intensity="1"
       alt="3D Modell"
       poster="preview-demontagekonzept.jpeg">
 
   </model-viewer>
-
-<button id="custom-ar-button">
-  Bei mir ansehen
-</button>
 
   <script>
      const viewer = document.getElementById("viewer");
@@ -97,9 +86,6 @@
       loader.style.display = "none";
     }, 1000);
   });
-document.getElementById("custom-ar-button").addEventListener("click", () => {
-  viewer.activateAR();
-});
   </script>
 
 </body>
