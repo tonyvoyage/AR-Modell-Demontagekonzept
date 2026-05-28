@@ -49,15 +49,20 @@
   position: fixed;
   top: 18px;
   right: 18px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+
+  padding: 14px 20px;
+
+  border-radius: 999px;
   border: none;
+
   background: #004752;
   color: white;
-  font-size: 24px;
+
+  font-size: 18px;
   font-weight: bold;
+
   z-index: 99999;
+
   box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
   </style>
@@ -89,7 +94,9 @@ max-field-of-view="60deg"
 
   </model-viewer>
 
-<button id="reset-view-button">↺</button>
+<button id="reset-view-button">
+Ansicht zurücksetzen
+</button>
 
   <script>
   const viewer = document.getElementById("viewer");
@@ -123,9 +130,9 @@ startAutoRotate();
 const resetButton = document.getElementById("reset-view-button");
 
 resetButton.addEventListener("click", () => {
-  viewer.cameraOrbit = "0deg 75deg 40m";
+  viewer.cameraOrbit = "0deg 75deg 80%";
   viewer.cameraTarget = "auto auto auto";
-  viewer.fieldOfView = "15deg";
+  viewer.fieldOfView = "45deg";
 }); 
 </script>
 
