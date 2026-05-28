@@ -85,9 +85,9 @@
     interaction-prompt="none"
     touch-action="none"
     camera-target="auto auto auto"
-    camera-orbit="0deg 75deg 75%"
-min-camera-orbit="auto auto 10%"
-max-camera-orbit="auto auto 85%"
+    camera-orbit="0deg 75deg 70%"
+min-camera-orbit="auto auto 8%"
+max-camera-orbit="auto auto 80%"
 field-of-view="45deg"
 min-field-of-view="25deg"
 max-field-of-view="60deg"
@@ -130,7 +130,7 @@ startAutoRotate();
 const resetButton = document.getElementById("reset-view-button");
 
 resetButton.addEventListener("click", () => {
-  viewer.cameraOrbit = "0deg 75deg 75%";
+  viewer.cameraOrbit = "0deg 75deg 70%";
   viewer.cameraTarget = "auto auto auto";
   viewer.fieldOfView = "45deg";
 }); 
