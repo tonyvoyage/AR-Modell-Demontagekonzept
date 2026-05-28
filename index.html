@@ -45,7 +45,21 @@
         transform: rotate(360deg);
       }
     }
-
+#reset-view-button {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #004752;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 99999;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
   </style>
 </head>
 
@@ -64,15 +78,18 @@
     alt="3D Modell"
     poster="preview-demontagekonzept.jpeg"
     interaction-prompt="none"
-    touch-action="pan-y"
-    camera-orbit="0deg 75deg 150%"
-min-camera-orbit="auto auto 20%"
-max-camera-orbit="auto auto 200%"
+    touch-action="none"
+    camera-target="auto auto auto"
+    camera-orbit="0deg 75deg 80%"
+min-camera-orbit="auto auto 10%"
+max-camera-orbit="auto auto 100%"
 field-of-view="45deg"
 min-field-of-view="25deg"
 max-field-of-view="60deg"
 
   </model-viewer>
+
+<button id="reset-view-button">↺</button>
 
   <script>
   const viewer = document.getElementById("viewer");
@@ -102,7 +119,14 @@ function stopAutoRotate() {
 viewer.addEventListener("camera-change", stopAutoRotate);
 
 startAutoRotate();
- 
+
+const resetButton = document.getElementById("reset-view-button");
+
+resetButton.addEventListener("click", () => {
+  viewer.cameraOrbit = "0deg 75deg 40m";
+  viewer.cameraTarget = "auto auto auto";
+  viewer.fieldOfView = "15deg";
+}); 
 </script>
 
 </body>
