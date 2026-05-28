@@ -65,18 +65,16 @@
     poster="preview-demontagekonzept.jpeg"
     interaction-prompt="none"
     touch-action="pan-y"
-    camera-orbit="0deg 75deg 50m"
-    min-camera-orbit="auto auto 1m"
-    max-camera-orbit="auto auto 1000m"
-    field-of-view="15deg"
-    min-field-of-view="5deg"
-    max-field-of-view="45deg">
+    camera-orbit="0deg 75deg 150%"
+min-camera-orbit="auto auto 50%"
+max-camera-orbit="auto auto 800%"
+field-of-view="45deg"
+min-field-of-view="25deg"
+max-field-of-view="60deg"
 
   </model-viewer>
 
   <script>
-  alert("Neues Script geladen");
-
   const viewer = document.getElementById("viewer");
   const loader = document.getElementById("loader-wrapper");
 
