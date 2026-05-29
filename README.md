@@ -7,7 +7,6 @@ Der Auftraggeber ist cunova.
 ## Funktionen
 
 - 3D-Ansichten
-- AR-Darstellung
 - Interaktive Navigation
 
 ## Website
